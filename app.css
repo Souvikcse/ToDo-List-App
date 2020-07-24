@@ -160,23 +160,28 @@ a {
     #c2 {
         font-size: 2rem;
     }
+
     .content {
         justify-content: start;
         height: 621px;
         margin-top: 90px;
     }
+
     .item1 {
         width: 40%;
     }
-    .cropped{
+
+    .cropped {
         right: 1%;
         width: 65%;
     }
+
     @keyframes slidein {
         100% {
             right: 10%;
         }
     }
+
     @keyframes moveup {
         100% {
             margin-top: 3px;
@@ -184,71 +189,86 @@ a {
     }
 }
 
-Section{
+Section {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 80px;
 }
-section hr{
+
+section hr {
     width: 250px;
     height: 3px;
     background-color: #3f51b5;
     border: 0;
     margin-bottom: 50px;
 }
-hr{
+
+hr {
     background-color: #3f51b5;
 }
-section h3.title{
+
+section h3.title {
     text-transform: capitalize;
     font: bold 32px "Open Sans", sans-serif;
     margin-bottom: 30px;
     text-align: center;
 }
-section p{
+
+section p {
     max-width: 775px;
     line-height: 2;
     padding: 0 20px;
     margin-bottom: 30px;
     text-align: center;
 }
-.carousel-item img{
+
+.carousel-item img {
     opacity: 0.75;
 }
+
 .card-title {
     font-family: 'Leckerli One', cursive;
     font-size: 3rem;
 }
-.card-text{
+
+.card-text {
     font-family: 'Maiden Orange', cursive;
     font-weight: 400;
     font-size: 1.3rem;
 }
+
 @media (max-width: 700px) {
-    .content > div {
+    .content>div {
         width: 25rem;
     }
-    .card-text{
+
+    .card-text {
         font-size: 1.5rem;
         font-weight: 250;
     }
-    .card-title{
+
+    .card-title {
         font-size: 1.5rem;
     }
+
     @keyframes slidein {
         100% {
             right: 25%;
         }
     }
 }
+
 @media (max-width: 900px) {
-    .back{
+    .back {
         opacity: 0.6;
     }
-    .destinations{
-        margin-top: 13rem;;
+
+    .destinations {
+        margin-top: 13rem;
+        ;
     }
+
     .content {
         padding: 1px;
         height: 100%;
@@ -263,18 +283,22 @@ section p{
         height: 20rem;
         width: 30rem;
     }
-    .card-text{
+
+    .card-text {
         font-size: 1.5rem;
         font-weight: 250;
     }
-    .card-title{
+
+    .card-title {
         font-size: 2rem;
     }
+
     @keyframes slidein {
         100% {
             right: 15%;
         }
     }
+
     @keyframes moveup {
         100% {
             margin-top: 3px;
@@ -285,17 +309,19 @@ section p{
 .hm-gradient {
     background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
 }
+
 .darken-grey-text {
     color: #2E2E2E;
 }
 
-.form{
+.form {
     width: 100%;
     height: 60px;
     border-radius: 7px;
     padding: 2rem;
 }
-.btn.form{
+
+.btn.form {
     padding: 1rem;
 }
 
@@ -308,23 +334,94 @@ section p{
 }
 
 /* Destinations Style */
-.destinations .grid li{
+.destinations .grid li {
     height: 350px;
     padding: 20px;
     background-clip: content-box;
     background-size: cover;
     background-position: center;
 }
-.destinations .grid li.small{
+
+.destinations .grid li.small {
     flex-basis: 30%;
 }
-.destinations .grid li.large{
+
+.destinations .grid li.large {
     flex-basis: 70%;
 }
 
 @media (max-width: 1100px) {
-	.destinations .grid li.small,
-	.destinations .grid li.large {
-		flex-basis: 50%;
-	}
+
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 50%;
+    }
+}
+
+
+.section-project {
+    padding: 50px 0;
+    position: relative;
+    background-color: #222;
+}
+
+
+
+
+.project-carousel {
+    position: relative;
+    padding: 50px 0;
+}
+
+.project-strip {
+    margin: 150px 0 150px;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.project-strip .project {
+    cursor: pointer;
+}
+
+.project-strip img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.project-screen {
+    width: 768px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.project-screen .project-detail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 578px;
+    height: 361px;
+    margin: 32px auto 0;
+    z-index: 1;
+    background-color: #333;
+}
+
+.project-screen .screen-frame {
+    content: " ";
+    width: 768px;
+    height: 400px;
+    position: absolute;
+    background-image: url("https://dl.dropboxusercontent.com/u/26808427/cdn/experiments/training/macbook-frame.png");
+    background-repeat: no-repeat;
+}
+
+.project-screen .project {
+    margin-right: -100%;
+    float: left;
+    cursor: move;
 }
