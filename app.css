@@ -100,14 +100,14 @@ a {
 }
 
 .content {
-    /* margin-top: 95px; */
+    margin-top: 55px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     height: 682px;
     width: 100%;
     padding: 90px;
-    animation: 1s moveup 0s forwards;
+    animation: 2s moveup 0s forwards;
     /* background: red; */
 }
 
@@ -184,68 +184,21 @@ a {
     }
 }
 
-@media (max-width: 900px) {
-    .destinations{
-        margin-top: 13rem;;
-    }
-    .content {
-        padding: 1px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-    }
-
-    .content>div {
-        align-self: center;
-        height: 20rem;
-        width: 30rem;
-    }
-    .cropped{
-        top: 60%;
-        width: 80%;
-    }
-    @keyframes slidein {
-        100% {
-            right: 15%;
-        }
-    }
-    @keyframes moveup {
-        100% {
-            margin-top: 3px;
-        }
-    }
-}
-
-@media (max-width: 700px) {
-    .content>div {
-        width: 25rem;
-    }
-    .cropped{
-        top: 75%;
-        width: 65%;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    @keyframes slidein {
-        100% {
-            right: 25%;
-        }
-    }
-}
 Section{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 80px;
 }
-hr{
+section hr{
     width: 250px;
     height: 3px;
     background-color: #3f51b5;
     border: 0;
     margin-bottom: 50px;
+}
+hr{
+    background-color: #3f51b5;
 }
 section h3.title{
     text-transform: capitalize;
@@ -263,12 +216,115 @@ section p{
 .carousel-item img{
     opacity: 0.75;
 }
-.carousel-caption h3 {
+.card-title {
     font-family: 'Leckerli One', cursive;
     font-size: 3rem;
 }
-.carousel-caption p{
+.card-text{
     font-family: 'Maiden Orange', cursive;
-    font-weight: 700;
-    font-size: 2rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+@media (max-width: 700px) {
+    .content > div {
+        width: 25rem;
+    }
+    .card-text{
+        font-size: 1.5rem;
+        font-weight: 250;
+    }
+    .card-title{
+        font-size: 1.5rem;
+    }
+    @keyframes slidein {
+        100% {
+            right: 25%;
+        }
+    }
+}
+@media (max-width: 900px) {
+    .back{
+        opacity: 0.6;
+    }
+    .destinations{
+        margin-top: 13rem;;
+    }
+    .content {
+        padding: 1px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .content>div {
+        align-self: center;
+        height: 20rem;
+        width: 30rem;
+    }
+    .card-text{
+        font-size: 1.5rem;
+        font-weight: 250;
+    }
+    .card-title{
+        font-size: 2rem;
+    }
+    @keyframes slidein {
+        100% {
+            right: 15%;
+        }
+    }
+    @keyframes moveup {
+        100% {
+            margin-top: 3px;
+        }
+    }
+}
+
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+
+.form{
+    width: 100%;
+    height: 60px;
+    border-radius: 7px;
+    padding: 2rem;
+}
+.btn.form{
+    padding: 1rem;
+}
+
+.grid {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Destinations Style */
+.destinations .grid li{
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+.destinations .grid li.small{
+    flex-basis: 30%;
+}
+.destinations .grid li.large{
+    flex-basis: 70%;
+}
+
+@media (max-width: 1100px) {
+	.destinations .grid li.small,
+	.destinations .grid li.large {
+		flex-basis: 50%;
+	}
 }
