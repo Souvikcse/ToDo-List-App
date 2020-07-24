@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    /* font: normal 16px sans-serif; */
+    /* color: #555; */
+}
+
+body {
+    /* border: 2px solid black; */
+    margin: 0;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    z-index: -2;
+    background-image: url("foodmain.jpg");
+}
+
+@keyframes slidein {
+    100% {
+        right: 10%;
+    }
+}
+
+#h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 3rem;
+    margin-left: 3rem;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+}
+
+#h2 {
+    text-align: right;
+}
+
+#c1 {
+    font-family: 'Maiden Orange', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 0;
+}
+
+#c2 {
+    font-family: 'Maiden Orange', cursive;
+    font-weight: 700;
+    font-size: 4rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#h3 {
+    font-size: 8rem;
+    margin: 0px;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+}
+
+.navbar {
+    font-family: 'Red Rose', cursive;
+    font-size: 2rem;
+    list-style: none;
+}
+
+.fa-bars {
+    font-size: 2rem;
+    color: black;
+}
+
+.navbar a:hover {
+    color: black;
+    text-decoration: none;
+    animation: 0.5s link 0s forwards;
+}
+
+@keyframes link {
+    100% {
+        text-decoration: underline;
+    }
+}
+
+.content {
+    /* margin-top: 95px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 682px;
+    width: 100%;
+    padding: 90px;
+    animation: 1s moveup 0s forwards;
+    /* background: red; */
+}
+
+.item1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+.item1 h1 {
+    font-family: 'Red Rose', cursive;
+    font-size: 4rem;
+}
+
+.item1.btn {
+    width: 40%;
+}
+
+.item1 h3 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 3rem;
+}
+
+.item1 hr {
+    height: 3px;
+    width: 60%;
+    background-color: grey;
+}
+
+
+@keyframes moveup {
+    100% {
+        margin-top: 3px;
+        padding-top: 1%;
+    }
+}
+
+@media (max-width: 1360px) {
+    body {
+        line-height: 0.8;
+    }
+
+    .leaf {
+        display: none;
+    }
+
+    #c2 {
+        font-size: 2rem;
+    }
+    .content {
+        justify-content: start;
+        height: 621px;
+        margin-top: 90px;
+    }
+    .item1 {
+        width: 40%;
+    }
+    .cropped{
+        right: 1%;
+        width: 65%;
+    }
+    @keyframes slidein {
+        100% {
+            right: 10%;
+        }
+    }
+    @keyframes moveup {
+        100% {
+            margin-top: 3px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .destinations{
+        margin-top: 13rem;;
+    }
+    .content {
+        padding: 1px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .content>div {
+        align-self: center;
+        height: 20rem;
+        width: 30rem;
+    }
+    .cropped{
+        top: 60%;
+        width: 80%;
+    }
+    @keyframes slidein {
+        100% {
+            right: 15%;
+        }
+    }
+    @keyframes moveup {
+        100% {
+            margin-top: 3px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .content>div {
+        width: 25rem;
+    }
+    .cropped{
+        top: 75%;
+        width: 65%;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    @keyframes slidein {
+        100% {
+            right: 25%;
+        }
+    }
+}
+Section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+hr{
+    width: 250px;
+    height: 3px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 50px;
+}
+section h3.title{
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+section p{
+    max-width: 775px;
+    line-height: 2;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.carousel-item img{
+    opacity: 0.75;
+}
+.carousel-caption h3 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 3rem;
+}
+.carousel-caption p{
+    font-family: 'Maiden Orange', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+}
