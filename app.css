@@ -57,6 +57,11 @@ body {
     margin: 0;
     line-height: 0;
 }
+@media (max-width: 400px){
+    #c1{
+        font-size: 1.65rem;
+    }
+}
 
 #c2 {
     font-family: 'Maiden Orange', cursive;
@@ -140,7 +145,6 @@ a {
     background-color: grey;
 }
 
-
 @keyframes moveup {
     100% {
         margin-top: 3px;
@@ -167,10 +171,6 @@ a {
     }
     .item1 {
         width: 40%;
-    }
-    .cropped{
-        right: 1%;
-        width: 65%;
     }
     @keyframes slidein {
         100% {
@@ -225,23 +225,6 @@ section p{
     font-weight: 400;
     font-size: 1.3rem;
 }
-@media (max-width: 700px) {
-    .content > div {
-        width: 25rem;
-    }
-    .card-text{
-        font-size: 1.5rem;
-        font-weight: 250;
-    }
-    .card-title{
-        font-size: 1.5rem;
-    }
-    @keyframes slidein {
-        100% {
-            right: 25%;
-        }
-    }
-}
 @media (max-width: 900px) {
     .back{
         opacity: 0.6;
@@ -279,6 +262,35 @@ section p{
         100% {
             margin-top: 3px;
         }
+    }
+}
+@media (max-width: 700px) {
+    .content > div {
+        width: 20rem;
+    }
+    .card-text{
+        font-size: 1.5rem;
+        font-weight: 250;
+    }
+    .card-title{
+        font-size: 1.5rem;
+    }
+    @keyframes slidein {
+        100% {
+            right: 25%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .content.item1 h1{
+        font-size: 2rem;
+    }
+    .content.item1 h3{
+        font-size: 1.5rem;
+    }
+    .content.item1{
+        width: 20rem;
     }
 }
 
