@@ -26,7 +26,7 @@ body {
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     z-index: -2;
-    background-image: url("foodmain.jpg");
+    background-image: url("download.png");
 }
 
 @keyframes slidein {
@@ -58,8 +58,11 @@ body {
     line-height: 0;
 }
 @media (max-width: 400px){
+    #h1{
+        font-size: 2rem;
+    }
     #c1{
-        font-size: 1.65rem;
+        font-size: 1.40rem;
     }
 }
 
@@ -103,8 +106,34 @@ a {
         text-decoration: underline;
     }
 }
+.btn.order{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    background: #1f1e1e;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    padding: 30px 80px;
+    border-radius: 18px;
+    box-shadow: 0 6px #171616;
+}
+.btn.order:hover{
+    box-shadow: 0 4px #171616;
+    top: 2px;
+}
+.btn.order:active{
+    box-shadow: none;
+    top: 6px;
+}
 
 .content {
+    position: relative;
     margin-top: 55px;
     display: flex;
     flex-wrap: wrap;
@@ -112,10 +141,27 @@ a {
     height: 682px;
     width: 100%;
     padding: 90px;
-    animation: 2s moveup 0s forwards;
+    animation: 2.5s moveup 0s forwards;
     /* background: red; */
 }
-
+.backimg{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    width: 40%;
+    height: 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    z-index: -2;
+    background-image: url("top_element_4.png");
+    animation: 2.5s pose 0s forwards;
+}
+@keyframes pose{
+    100%{
+        left: 50%;
+    }
+}
 .item1 {
     display: flex;
     flex-direction: column;
@@ -145,6 +191,7 @@ a {
     background-color: grey;
 }
 
+
 @keyframes moveup {
     100% {
         margin-top: 3px;
@@ -164,17 +211,26 @@ a {
     #c2 {
         font-size: 2rem;
     }
+
     .content {
         justify-content: start;
         height: 621px;
         margin-top: 90px;
     }
+    .backimg{
+        top: 20%;
+    }
     .item1 {
-        width: 40%;
+        width: 55%;
     }
     @keyframes slidein {
         100% {
             right: 10%;
+        }
+    }
+    @keyframes pose{
+        100%{
+            left: 50%;
         }
     }
     @keyframes moveup {
@@ -184,53 +240,81 @@ a {
     }
 }
 
-Section{
+Section {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 80px;
 }
-section hr{
+
+section hr {
     width: 250px;
     height: 3px;
     background-color: #3f51b5;
     border: 0;
     margin-bottom: 50px;
 }
-hr{
-    background-color: #3f51b5;
+
+hr {
+    background-color: #efeff3;
 }
-section h3.title{
+
+section h3.title {
     text-transform: capitalize;
     font: bold 32px "Open Sans", sans-serif;
     margin-bottom: 30px;
     text-align: center;
 }
-section p{
+
+section p {
     max-width: 775px;
     line-height: 2;
     padding: 0 20px;
     margin-bottom: 30px;
     text-align: center;
 }
-.carousel-item img{
+
+.carousel-item img {
     opacity: 0.75;
 }
+
 .card-title {
     font-family: 'Leckerli One', cursive;
     font-size: 3rem;
 }
-.card-text{
+
+.card-text {
     font-family: 'Maiden Orange', cursive;
     font-weight: 400;
     font-size: 1.3rem;
 }
+.card{
+    border: white;
+}
+.card-img-top{
+    border-radius: 53%;
+    transform: scale(0.7);
+    transition: transform 0.4s ease-in-out;
+}
+.card-img-top:hover {
+    transform: scale(1);
+}
+.card-footer{
+    background-color: white;
+}
 @media (max-width: 900px) {
-    .back{
+    .back {
         opacity: 0.6;
     }
-    .destinations{
-        margin-top: 13rem;;
+    .backimg{
+        opacity: 0.6;
+    }
+    .destinations {
+        margin-top: 13rem;
+        
+    }
+    .item1{
+        margin-top: 7.5rem;
     }
     .content {
         padding: 1px;
@@ -246,16 +330,24 @@ section p{
         height: 20rem;
         width: 30rem;
     }
-    .card-text{
+
+    .card-text {
         font-size: 1.5rem;
         font-weight: 250;
     }
-    .card-title{
+
+    .card-title {
         font-size: 2rem;
     }
+
     @keyframes slidein {
         100% {
             right: 15%;
+        }
+    }
+    @keyframes pose{
+        100%{
+            left: 35%;
         }
     }
     @keyframes moveup {
@@ -268,12 +360,27 @@ section p{
     .content > div {
         width: 20rem;
     }
+    .item1{
+        margin-top: 7.5rem;
+    }
+    .item1 h3{
+        font-size: 2.2rem;
+    }
+    .item1 h1{
+        font-size: 2rem;
+    }
     .card-text{
         font-size: 1.5rem;
         font-weight: 250;
     }
     .card-title{
         font-size: 1.5rem;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .backimg{
+        opacity: 0.45;
     }
     @keyframes slidein {
         100% {
@@ -283,6 +390,11 @@ section p{
 }
 
 @media (max-width: 500px) {
+    @keyframes pose{
+        100%{
+            left: 20%;
+        }
+    }
     .content.item1 h1{
         font-size: 2rem;
     }
@@ -294,24 +406,37 @@ section p{
     }
 }
 
-.hm-gradient {
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+.hm-gradient main{
+    background-image: url("https://rositas.netlify.app/img/team-img/food/mm-1.jpg");
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
 }
+.foot{
+    color: white;
+    font-size: 1.5rem;
+}
+.foot:hover{
+    color: white;
+}
+
 .darken-grey-text {
     color: #2E2E2E;
 }
 
-.form{
+.form {
     width: 100%;
     height: 60px;
     border-radius: 7px;
     padding: 2rem;
 }
-.btn.form{
+
+.btn.form {
     padding: 1rem;
 }
 
 .grid {
+    position: relative;
     list-style: none;
     width: 100%;
     display: flex;
@@ -320,23 +445,94 @@ section p{
 }
 
 /* Destinations Style */
-.destinations .grid li{
+.destinations .grid li {
     height: 350px;
     padding: 20px;
     background-clip: content-box;
     background-size: cover;
     background-position: center;
 }
-.destinations .grid li.small{
+
+.destinations .grid li.small {
     flex-basis: 30%;
 }
-.destinations .grid li.large{
+
+.destinations .grid li.large {
     flex-basis: 70%;
 }
 
 @media (max-width: 1100px) {
-	.destinations .grid li.small,
-	.destinations .grid li.large {
-		flex-basis: 50%;
-	}
+
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 50%;
+    }
+}
+
+.section-project {
+    padding: 50px 0;
+    position: relative;
+    background-color: #222;
+}
+
+.project-carousel {
+    position: relative;
+    padding: 50px 0;
+}
+
+.project-strip {
+    margin: 150px 0 150px;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.project-strip .project {
+    cursor: pointer;
+}
+
+.project-strip img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.project-screen {
+    width: 768px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.project-screen .project-detail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 578px;
+    height: 361px;
+    margin: 32px auto 0;
+    z-index: 1;
+    background-color: #333;
+}
+
+.project-screen .screen-frame {
+    content: " ";
+    width: 768px;
+    height: 400px;
+    position: absolute;
+    background-image: url("https://dl.dropboxusercontent.com/u/26808427/cdn/experiments/training/macbook-frame.png");
+    background-repeat: no-repeat;
+}
+
+.project-screen .project {
+    margin-right: -100%;
+    float: left;
+    cursor: move;
+}
+
+@media (max-width: 800px){
+    
 }
