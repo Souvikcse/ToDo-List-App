@@ -54,6 +54,7 @@ body {
     font-family: 'Maiden Orange', cursive;
     font-weight: 700;
     font-size: 2rem;
+    color: white;
     margin: 0;
     line-height: 0;
 }
@@ -68,6 +69,7 @@ body {
 
 #c2 {
     font-family: 'Maiden Orange', cursive;
+    color: white;
     font-weight: 700;
     font-size: 4rem;
     padding-top: 0;
@@ -80,7 +82,7 @@ body {
 }
 
 a {
-    color: black;
+    color: white;
     cursor: pointer;
 }
 
@@ -155,7 +157,7 @@ a {
     background-size: 100% 100%;
     z-index: -2;
     background-image: url("top_element_4.png");
-    animation: 2.5s pose 0s forwards;
+    animation: 3s pose 0s forwards;
 }
 @keyframes pose{
     100%{
@@ -313,6 +315,9 @@ section p {
         margin-top: 13rem;
         
     }
+    #c1, #c2{
+        color: black;
+    }
     .item1{
         margin-top: 7.5rem;
     }
@@ -392,7 +397,7 @@ section p {
 @media (max-width: 500px) {
     @keyframes pose{
         100%{
-            left: 20%;
+            left: 15%;
         }
     }
     .content.item1 h1{
@@ -403,6 +408,13 @@ section p {
     }
     .content.item1{
         width: 20rem;
+    }
+}
+@media (max-width: 400px){
+    @keyframes pose{
+        100%{
+            left: 0%;
+        }
     }
 }
 
@@ -534,5 +546,5 @@ section p {
 }
 
 @media (max-width: 800px){
-    
+
 }
