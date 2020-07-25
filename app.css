@@ -26,7 +26,7 @@ body {
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
     z-index: -2;
-    background-image: url("download.png");
+    background-image: url("new-back.jpeg");
 }
 
 @keyframes slidein {
@@ -460,10 +460,25 @@ section p {
 .destinations .grid li {
     height: 350px;
     padding: 20px;
-    background-clip: content-box;
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    text-align: center;
+    color: white;
 }
+.destinations .grid li img{
+    opacity: 0.55;
+}
+.destinations .grid li:hover img{
+    opacity: 1;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Leckerli One', cursive;
+    font-size: 3rem;
+    color: white;
+    transform: translate(-50%, -50%);
+  }
 
 .destinations .grid li.small {
     flex-basis: 30%;
@@ -478,6 +493,15 @@ section p {
     .destinations .grid li.small,
     .destinations .grid li.large {
         flex-basis: 50%;
+    }
+}
+@media (max-width: 500px){
+    .centered{
+        font-size: 1.5rem;
+    }
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 100%;
     }
 }
 
@@ -546,5 +570,48 @@ section p {
 }
 
 @media (max-width: 800px){
+    .project-screen{
+        width: 600px;
+    }
+    .project-screen .project-detail{
+        width: 400px;
+    }
+    .project-screen .screen-frame{
+        width: 600px;
+    }
+}
 
+@media (max-width: 625px){
+    .project-screen{
+        width: 510px;
+    }
+    .project-screen .project-detail{
+        width: 300px;
+    }
+    .project-screen .screen-frame{
+        width: 510px;
+    }
+}
+ 
+@media (max-width: 525px){
+    .project-screen{
+        width: 400px;
+    }
+    .project-screen .project-detail{
+        width: 250px;
+    }
+    .project-screen .screen-frame{
+        width: 400px;
+    }
+}
+@media (max-width: 430px){
+    .project-screen{
+        width: 250px;
+    }
+    .project-screen .project-detail{
+        width: 160px;
+    }
+    .project-screen .screen-frame{
+        width: 250px;
+    }
 }
